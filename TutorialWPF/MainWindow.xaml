@@ -1,0 +1,43 @@
+﻿<Window x:Class="TutorialWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TutorialWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,0,2,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="0">
+            <RadioButton x:Name="RBtnRed" Content="Red" HorizontalAlignment="Center" FontSize="20px" Checked="RBtnRed_Checked"/>
+            <RadioButton x:Name="RBtnBlue" Content="Blue" HorizontalAlignment="Center" FontSize="20px" Checked="RBtnBlue_Checked"/>
+        </StackPanel>
+
+        <Button x:Name="BtnShow" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Height="85" Click="BtnShow_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="ImgEye" Source="pack://siteoforigin:,,,/Resources/eye.png" Height="61" />
+                <Label x:Name="LblShow" Content="Show" VerticalAlignment="Center"></Label>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="BtnShowTxt" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Content="Show text" Height="85" Click="BtnShowTxt_Click"/>
+        <Label x:Name="LabelNew" Grid.Row="0" Grid.Column="1" Content="New Label" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20px" FontStyle="Italic" Visibility="Hidden"></Label>
+        <Label x:Name="LabelRight" Grid.Row="1" Grid.Column="2" Content="Label" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20px"></Label>
+        <TextBox x:Name="TxtBox" Grid.Row="1" Grid.Column="1" Text="Text Box Witam" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Button x:Name="BtnGlass" Style="{DynamicResource GlassButton}" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Content="Glass button" Height="85"/>
+
+    </Grid>
+
+
+</Window>
